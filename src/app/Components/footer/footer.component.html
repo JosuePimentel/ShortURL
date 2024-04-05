@@ -1,0 +1,29 @@
+<footer class="px-[200px] py-[50px] h-[350px] w-full bg-tertiarydarkViolet">
+    <app-logo
+        additionalStyleSVG=" fill-white "
+    />
+
+    <div>
+        @for (item of items; track $index) {
+            <ul>
+                <app-itemsRouter
+                    [item]="item.parentLink"
+                />
+
+                @for (itemChildren of item.childrensLink; track $index) {
+                <app-itemsRouter
+                    [item]="itemChildren"
+                /> 
+                }
+            </ul>
+        }
+
+        <ul>
+            @for (item of socialMedias; track $index) {
+                    <app-itemsSocial
+                        [item]="item"
+                    ></app-itemsSocial>
+                }
+        </ul>
+    </div>
+</footer>

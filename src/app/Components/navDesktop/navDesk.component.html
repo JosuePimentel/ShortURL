@@ -1,0 +1,19 @@
+<div class="flex w-full items-center justify-between">
+
+    <ul class="flex gap-[30px] items-center">
+        @for (item of itemLink; track $index) {
+            <app-itemsRouter
+                [item]="item"
+            />
+        }
+    </ul>
+
+    <ul class="flex gap-[30px] items-center">
+        @for (item of itemLogin; track $index) {
+            <app-itemsRouter
+                [item]="item"
+            />
+        }
+    </ul>
+    
+</div>

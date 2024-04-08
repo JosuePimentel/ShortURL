@@ -44,3 +44,17 @@
 @layer components {
   
 }
+
+@layer utilities {
+  .svgHover:hover path {
+    @apply fill-primaryCyan
+  }
+
+  .shorten {
+    @apply bg-primaryViolet rounded-lg bg-shortenDesktop bg-no-repeat bg-left-top bg-cover
+  }
+
+  .boost {
+    @apply bg-primaryViolet bg-boostDesktop bg-no-repeat bg-left-top bg-cover
+  }
+}

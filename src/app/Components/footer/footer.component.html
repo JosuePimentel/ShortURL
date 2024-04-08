@@ -1,28 +1,31 @@
-<footer class="px-[200px] py-[50px] h-[350px] w-full bg-tertiarydarkViolet">
+<footer class="px-[200px] py-[60px] h-[350px] w-full bg-tertiarydarkViolet flex gap-[300px]">
     <app-logo
         additionalStyleSVG=" fill-white "
     />
 
-    <div>
+    <div class="flex justify-between w-full ">
         @for (item of items; track $index) {
-            <ul>
+            <ul class="flex flex-col gap-[10px]">
                 <app-itemsRouter
                     [item]="item.parentLink"
+                    additionalCSS=" text-white hover:text-primaryCyan font-bold"
+                    class="mb-[10px]"
                 />
 
                 @for (itemChildren of item.childrensLink; track $index) {
                 <app-itemsRouter
                     [item]="itemChildren"
+                    additionalCSS=" text-tertiaryGray hover:text-primaryCyan font-bold "
                 /> 
                 }
             </ul>
         }
 
-        <ul>
+        <ul class="flex gap-[20px]">
             @for (item of socialMedias; track $index) {
                     <app-itemsSocial
                         [item]="item"
-                    ></app-itemsSocial>
+                    />
                 }
         </ul>
     </div>

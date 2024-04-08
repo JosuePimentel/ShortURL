@@ -14,6 +14,12 @@ module.exports = {
       'MobileS': {max: '320px'}
     },
     extend: {
+      backgroundImage: {
+        'shortenDesktop': "url('/assets/images/bg-shorten-desktop.svg')",
+        'shortenMobile': "url('/assets/images/bg-shorten-mobile.svg')",
+        'boostDesktop': "url('/assets/images/bg-boost-desktop.svg')",
+        'boostMobile': "url('/assets/images/bg-boost-mobile.svg')"
+      },
       colors: {
         primaryCyan: 'hsl(180, 66%, 49%)',
         primaryViolet: 'hsl(257, 27%, 26%)',

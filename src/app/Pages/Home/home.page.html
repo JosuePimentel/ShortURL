@@ -1,0 +1,58 @@
+<div class="bg-white flex gap-[50px] px-[200px] py-[100px] relative h-[90vh]">
+    
+    <div class="pt-[70px] w-[550px]">
+        <h1 class="text-7xl font-extrabold pb-[10px]">More than just shorter links</h1>
+        <p class="text-tertiaryGray text-bodyFont pb-[50px]">Build your brand's recognition and get detailed insights on how your links are performing.</p>
+        <app-btnStart
+            [text]="'Get Started'"
+        />
+    </div>
+
+    <div class="absolute right-[-150px] top-[100px]">
+        <img src="assets/images/illustration-working.svg">
+    </div>
+
+    
+</div>
+
+<div class="min-h-[90vh] bg-gray-100 relative pt-[150px]" id="shortenSection">
+    
+    <app-shortURL
+    />
+
+    <div class="w-[60%] mx-[20%] flex flex-col gap-[30px]">
+        @for (item of url; track $index) {
+            <app-short
+                [url]="item"
+            />
+        }
+    </div>
+
+    <div class="flex flex-col justify-between items-center pb-[150px]">
+        <div class="flex flex-col items-center w-[450px]">
+            <h3 class="text-4xl font-extrabold mb-[15px]">Advanced Statistics</h3>
+            <p class="text-base text-wrap text-tertiaryGray text-center">Track how your links are performing across the web with our advanced statistics dashboard. </p>
+        </div>
+
+        <div class="flex gap-[30px] mt-[50px] relative z-0 items-center">
+            @for (item of card; track $index) { 
+                <app-card
+                    [card]="item"
+                    class="z-[10000]"
+                    [margin]="$index"
+                />
+            }
+            
+        <span class="absolute block h-[15px] w-full bg-primaryCyan z-10"></span>
+        </div>
+
+    </div>
+
+    <div class="h-[300px] boost flex justify-center items-center flex-col gap-[50px]">
+        <h2 class="text-white text-4xl font-extrabold">Boost your link today</h2>
+        <app-btnStart
+            [text]="'Get Started'"
+            [additionalClass]="'text-2xl px-[40px] py-[15px]'"
+        />
+    </div>
+</div>

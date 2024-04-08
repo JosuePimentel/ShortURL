@@ -4,6 +4,7 @@
         @for (item of itemLink; track $index) {
             <app-itemsRouter
                 [item]="item"
+                additionalCSS=" font-extrabold {{item?.name == 'Sign Up' ? '  bg-primaryCyan rounded-full text-white hover:opacity-50 transition-opacity px-[25px] py-[10px] ' : ' text-tertiaryGray hover:text-black '}} "
             />
         }
     </ul>
@@ -12,6 +13,7 @@
         @for (item of itemLogin; track $index) {
             <app-itemsRouter
                 [item]="item"
+                additionalCSS=" font-extrabold {{item?.name == 'Sign Up' ? '  bg-primaryCyan rounded-full text-white hover:opacity-50 transition-opacity px-[25px] py-[10px] ' : ' text-tertiaryGray hover:text-black '}} "
             />
         }
     </ul>

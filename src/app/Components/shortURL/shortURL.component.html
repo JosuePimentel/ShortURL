@@ -1,0 +1,5 @@
+<div class="w-[60%] p-[50px] shorten absolute -top-[72px] left-[20%] flex gap-[30px]">
+    <input type="text" class="py-[10px] px-[30px] w-full rounded-lg {{noUrl ? ' placeholder:text-secondaryRed border-4 border-solid border-secondaryRed ' : 'outline-none'}}" placeholder="Shorten a link here...">
+    <button class="bg-primaryCyan py-[10px] px-[30px] rounded-lg text-white font-medium text-nowrap hover:opacity-50 transition-opacity" (click)="shortLink()">Shorten it!</button>
+    <span class=" {{noUrl ? ' absolute bottom-4 block text-secondaryRed italic' : ' hidden '}}">Please add a link</span>
+</div>

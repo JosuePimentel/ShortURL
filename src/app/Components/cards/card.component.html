@@ -1,0 +1,7 @@
+<div class="bg-white w-[350px] rounded-lg px-[30px] py-[50px] relative flex flex-col justify-center {{margin == 1 ? 'mt-[50px]' : (margin == 2 ? 'mt-[100px]' : '')}}">
+    <div [innerHTML]="safeSVG" class="p-[15px] rounded-full bg-primaryViolet w-min absolute -top-[35px] left-[25px]"></div>
+
+    <h4 class="font-extrabold text-2xl mb-[15px]">{{card.title}}</h4>
+    <p class="text-tertiaryGray text-sm text-justify">{{card.text}}</p>
+
+</div>

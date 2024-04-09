@@ -16,8 +16,8 @@ export type itemLinkSVG = {
 }
 
 export type shortURL = {
-    urlLong?: string,
-    urlShort?: string
+    long_url?: string,
+    link?: string
 }
 
 export type card = {

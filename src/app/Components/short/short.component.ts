@@ -9,10 +9,7 @@ import { shortURL } from "../../module/types";
 })
 
 export class ShortComponent { 
-    @Input({required: true}) url: shortURL = {
-        urlLong: '',
-        urlShort: ''
-    }
+    @Input({required: true}) url: shortURL = { }
 
     copy() { }
 }

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnChanges, SimpleChanges } from "@angular/core";
 import { ButtonStartedComponent } from "../../Components/buttonStart/btnStart.component";
 import { ShortURLComponent } from "../../Components/shortURL/shortURL.component";
 import { card, shortURL } from "../../module/types";
@@ -12,8 +12,13 @@ import { CardComponent } from "../../Components/cards/card.component";
     templateUrl: "home.page.html"
 })
 
-export class HomePage { 
+export class HomePage implements OnChanges { 
     url: shortURL[] = [ ]
+    lastURL: shortURL = { }
+    
+    ngOnChanges(changes: SimpleChanges): void {
+        console.log(changes)
+    }
 
     card: card[] = [
         {

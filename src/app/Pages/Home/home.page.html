@@ -18,10 +18,10 @@
 <div class="min-h-[90vh] bg-gray-100 relative pt-[150px]" id="shortenSection">
     
     <app-shortURL
-        (urlShortEmmiter)="lastURL"
+        (eventEmmiterURL)="receiveEmmiterURL($event)"
     />
 
-    <div class="w-[60%] mx-[20%] flex flex-col gap-[30px]">
+    <div class="w-[60%] mx-[20%] flex flex-col gap-[30px] mb-[50px]">
         @for (item of url; track $index) {
             <app-short
                 [url]="item"

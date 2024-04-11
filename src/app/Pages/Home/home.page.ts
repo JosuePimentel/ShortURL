@@ -4,6 +4,7 @@ import { ShortURLComponent } from "../../Components/shortURL/shortURL.component"
 import { card, shortURL } from "../../module/types";
 import { ShortComponent } from "../../Components/short/short.component";
 import { CardComponent } from "../../Components/cards/card.component";
+import { EventEmitter } from "node:stream";
 
 @Component({
     selector: 'app-home',
@@ -12,12 +13,11 @@ import { CardComponent } from "../../Components/cards/card.component";
     templateUrl: "home.page.html"
 })
 
-export class HomePage implements OnChanges { 
+export class HomePage { 
     url: shortURL[] = [ ]
-    lastURL: shortURL = { }
-    
-    ngOnChanges(changes: SimpleChanges): void {
-        console.log(changes)
+
+    receiveEmmiterURL(ele: shortURL) {
+        this.url.push(ele)
     }
 
     card: card[] = [

@@ -13,13 +13,12 @@ export class ShortURLComponent {
     noUrl: boolean = false
     urlValue: string = ''
 
-    @Output() eventEmmiterURL = new EventEmitter
+    @Output() eventEmmiterURL: EventEmitter<any> = new EventEmitter
 
     constructor(private service: URLService) { }
 
     getURLShort() {
         this.service.getURL(this.urlValue).subscribe((resp: any) => {
-            // console.log(resp)
             this.eventEmmiterURL.emit(resp)
         })
     }
@@ -31,8 +30,9 @@ export class ShortURLComponent {
         }
         else
         {
-            this.getURLShort()
             this.noUrl = false
+            this.getURLShort()
+            this.urlValue = ''
         }
     }
 }
